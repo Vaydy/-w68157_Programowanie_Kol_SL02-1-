@@ -10,6 +10,7 @@ function validateForm(event) {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
+    var phone = document.getElementById('phone').value;
 
  
     if (login.length < 3) {
@@ -45,4 +46,19 @@ function isValidEmail(email) {
 function isValidPassword(password) {
     var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     return passwordRegex.test(password);
+}
+function isValidPhone(phone) {
+    var phoneRegex = /^\d+$/;
+    return phoneRegex.test(phone);
+}
+
+function isValidBirthdate(birthdate) {
+    var today = new Date();
+    var selectedDate = new Date(birthdate);
+    var age = today.getFullYear() - selectedDate.getFullYear();
+    var monthDiff = today.getMonth() - selectedDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < selectedDate.getDate())) {
+        age--;
+    }
+    return age >= 18;
 }

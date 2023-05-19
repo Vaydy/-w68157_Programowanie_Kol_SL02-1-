@@ -29,10 +29,23 @@
             <span id="confirmPasswordError" class="error"></span>
         </div>
         <div>
+            <input type="checkbox" id="phoneCheckbox" onchange="togglePhoneField()">
+            <label for="phoneCheckbox">Potrzebuję pola telefon</label>
+        </div>
+        <div id="phoneContainer" style="display: none;">
+            <label for="phone">Telefon:</label>
+            <input type="text" id="phone" pattern="[0-9]*">
+            <span id="phoneError" class="error"></span>
+        </div>
+        <div>
+            <label for="birthdate">Data urodzenia:</label>
+            <input type="date" id="birthdate" required>
+            <span id="birthdateError" class="error"></span>
+        </div>
+        <div>
             <input type="submit" value="Zarejestruj">
         </div>
     </form>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
