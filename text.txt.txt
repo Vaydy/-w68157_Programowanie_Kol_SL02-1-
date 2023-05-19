@@ -1,2 +1,0 @@
-push - to jest comanda żeby dodać pliki do repozytorium
-git status - to są jake zmiany zostale prepisana

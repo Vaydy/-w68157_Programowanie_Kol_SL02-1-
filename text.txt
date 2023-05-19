@@ -1,0 +1,2 @@
+push - to polecenie, które dodaje pliki do repozytorium
+jest to polecenie, które pokazuje, jakie zmiany zaszły w plikach
